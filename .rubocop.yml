@@ -11,6 +11,8 @@ AllCops:
 
 Layout/LineLength:
   Max: 120
+Layout/EndOfLine:
+  Enabled: false
 Metrics/MethodLength:
   Include:
     - 'app/controllers/*'
