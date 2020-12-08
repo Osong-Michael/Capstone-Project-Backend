@@ -21,17 +21,18 @@ class SessionsController < ApplicationController
         logged_in: true,
         user: @current_user
       }
-    else {
+    else render json: 
+      {
       logged_in: false
     }
     end
   end
 
   def logout
-    reset_session
+    session[:user_id] = nil
     render json: {
       status: 200,
-      logged_out: true
+      logged_in: false
     }
   end
 end
