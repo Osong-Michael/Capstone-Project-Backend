@@ -4,4 +4,5 @@ class User < ApplicationRecord
   validates_uniqueness_of :username
 
   has_many :favourites
+  has_many :favourite_shoes, through: :favourites, source: :shoe
 end
