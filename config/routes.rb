@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   get 'shoes/:id', to: 'shoes#show'
   resources :sessions, only: [:create]
   resources :registrations, only: [:create]
-  put 'favourites/new/:id', to: 'favourites#fav_create'
+  post 'favourites/new/{:shoe_id,:user_id}', to: 'favourites#fav_create'
   get 'favourites/all', to: 'favourites#fav_shoes'
   delete :logout, to: 'sessions#logout'
   get :logged_in, to: 'sessions#logged_in'
