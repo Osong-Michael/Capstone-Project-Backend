@@ -19,7 +19,8 @@ class SessionsController < ApplicationController
     if @current_user
       render json: {
         logged_in: true,
-        user: @current_user
+        user: @current_user,
+        user_fav: @current_user.favourite_shoes
       }
     else render json: 
       {
