@@ -12,4 +12,5 @@ RSpec.describe ShoesController, type: :controller do
       expect(response.body).to match('[]')
     end
   end
+  it { should route(:get, '/shoes').to(action: :index) }
 end
