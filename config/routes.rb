@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'shoes#index'
   get 'shoes', to: 'shoes#index'
   get 'shoes/:id', to: 'shoes#show'
   resources :sessions, only: [:create]
